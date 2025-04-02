@@ -1,8 +1,46 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+## Product Go - Documentation
+Overview
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Product Go is a mobile application that displays various products available for purchase along with their prices. This project is designed to showcase products in an organized manner, allowing users to checkout about products.
+
+## Features
+
+Product Display: Shows products with images, names, and prices
+
+Categories: Products organized into different categories
+
+Responsive Design: Works on mobile devices
+
+## Product Cards: 
+Each product is displayed in a visually appealing card with:
+
+High-quality image
+
+Product name
+
+Price (with currency formatting)
+
+Rating stars (if reviews are available)
+
+## Product Details Page
+Expanded Product View:
+
+High-res images
+
+Detailed description & specifications
+
+## User Accounts
+Sign Up / Login:
+
+Email + password
+
+## Technical Stack
+Frontend: React.js, Next.js (if used), Tailwind CSS / SASS
+
+State Management: Redux / Context API
+
+Deployment: GitHub Pages
 
 ## Step 1: Start the Metro Server
 
@@ -77,3 +115,66 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+
+## Project Structure
+
+ProductViewApp/
+├── android/                      # Android native code
+├── ios/                          # iOS native code
+├── node_modules/                 # Installed dependencies
+├── src/                         
+│   ├── assets/                   # Images, fonts
+│   │   ├── fonts/
+│   │   └── images/
+│   ├── components/               # Reusable UI components
+│   │   ├── AppHeader.jsx
+│   │   ├── CustomButton.jsx
+│   │   ├── CustomInput.jsx
+│   │   ├── CustomListCard.jsx
+│   │   ├── DashboardCard.jsx
+│   │   ├── skeletonLoaders.jsx
+│   │   └── ViewMore.jsx
+│   ├── global/                   # Global files to access fonts and colors
+│   │   ├── colors.js
+│   │   └── fonts.js
+│   ├── navigations/              # Navigation components
+│   │   ├── AuthNavigation.jsx
+│   │   ├── BottomTab.jsx
+│   │   ├── MainNavigation.jsx
+│   │   └── RouterWrapper.jsx
+│   ├── screens/                  # Application screens
+│   │   ├── Categories.jsx
+│   │   ├── CategoryList.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── EditProfile.jsx
+│   │   ├── Login.jsx
+│   │   ├── Profile.jsx
+│   │   └── ViewDetails.jsx
+│   ├── slice/                    # API calls and business logic
+│   │   ├── API.js
+│   │   ├── Environment.js         
+│   │   └── userSlice.js
+│   ├── store/                    # Store for reducer persisting 
+│   │   └── store.js
+│   └── utils/                    # Utility functions
+├── App.js                        # Entry point of the app
+├── package.json                  # Project dependencies
+├── .babelrc                      # Babel configuration
+├── .gitignore                    # Git ignore file
+└── README.md                     # Project documentation
+
+assets/: Store static files like images, icons, fonts, etc.
+components/: Reusable UI components (e.g., custombutton for displaying the same button for overall screens).
+
+screens/: Screens for different views (e.g., Dashboard).
+
+slice/: Handles API calls and business logic and aslo for slices (e.g., fetching product data).
+
+navigations/: Manages app navigation using React Navigation.
+
+global/: Defines app-wide constants like colors, font sizes, etc.
+
+store/: Used for creating the Async storage for reducers.
+
+utils/: Utility functions, such as formatting prices or dates.
